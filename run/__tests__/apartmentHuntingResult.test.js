@@ -177,9 +177,9 @@ describe("Result Test", () => {
             store: true,
           },
         ],
-        [("gym", "school", "store")]
+        ["gym", "school", "store"]
       )
-    ).toEqual(5)
+    ).toEqual(4)
   })
 
   it("Test Case #5", () => {
