@@ -6,7 +6,7 @@ function apartmentHunting(blocks, reqs) {
     return sorted[0] ? sorted[0][1] : 0;
   }
   const points = blocks.map((_, i) => [i, reqs.map(y => nearestFeatureStep(i, y))]);
-  const sort = points.sort((a, b) => a[1].reduce((a, b) => a > b ? a : b) - b[1].reduce((a, b) => a > b ? a : b));
+  const sort = points.sort((a, b) => Math.max(...a[1]) - Math.max(...b[1]));
 
   return sort[0][0];
 }
